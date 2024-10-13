@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "python_in_science"
+version = "0.1.0"
+description = ""
+authors = ["Dawid Karpiński"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ascii-graph = "^1.5.1"
+tqdm = "^4.66.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
