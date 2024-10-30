@@ -8,6 +8,7 @@ authors = ["Dawid Karpiński"]
 python = "^3.11"
 ascii-graph = "^1.5.1"
 tqdm = "^4.66.5"
+pillow = "^11.0.0"
 
 
 [build-system]

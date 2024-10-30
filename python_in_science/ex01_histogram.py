@@ -41,7 +41,7 @@ parser.add_argument(
     nargs="+",
     default=[],
     type=str,
-    help="list of files to ignored",
+    help="list of words to ignored",
 )
 
 args = parser.parse_args()
