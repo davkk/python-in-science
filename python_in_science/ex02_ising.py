@@ -125,13 +125,12 @@ if __name__ == "__main__":
         B=args.B,
         density=args.density,
     )
-    print()
 
     width = 1024
     height = 1024
 
     images = [] if args.output_animation else None
-    output_stats = open(args.output_stats) if args.output_stats else None
+    output_stats = open(args.output_stats, "w") if args.output_stats else None
 
     for step, magnet, spins in tqdm.tqdm(
         ising.simulation(),
