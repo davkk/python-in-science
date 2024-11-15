@@ -50,7 +50,7 @@ class Ising:
 
             spin = self.lattice[idx]
 
-            dE = 2.0 * (self.J * spin * self.sum_neighbors(idx) + self.B * spin)
+            dE = 2.0 * spin * (self.J * self.sum_neighbors(idx) + self.B)
             dM = 2 * spin
 
             if dE < 0.0 or random.random() < math.exp(-dE * self.beta):
@@ -59,7 +59,7 @@ class Ising:
                 self.magnet += dM
 
             if step % self.n == 0:
-                yield step, self.magnet, self.lattice.copy()
+                yield step, self.magnet / self.n, self.lattice.copy()
 
 
 if __name__ == "__main__":
